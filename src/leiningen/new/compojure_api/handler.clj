@@ -1,17 +1,19 @@
 (ns {{name}}.handler
   (:require [compojure.api.sweet :refer :all]
             [ring.util.http-response :refer :all]
-            [{{name}}.domain :refer :all]))
+            [ring.swagger.schema :refer :all]))
+
+(defmodel Result {:result Long})
 
 (defapi app
   (swagger-ui)
   (swagger-docs
     :title "Sample Api"
-    :description "Compojure Api sample application")
-  (swaggered "pizza"
-    :description "pizza apis"
-      (POST* "/pizza" []
-        :return   Pizza
-        :body     [pizza NewPizza]
-        :summary  "creates a new pizza"
-        (ok (assoc pizza :id (rand-int 100))))))
+    :description "Sample api it is.")
+  (swaggered "math"
+    :description "web maths"
+      (GET* "/plus" []
+        :return Result
+        :query-params [x :- Long, y :- Long]
+        :summary "x+y"
+        (ok {:result (+ x y)}))))

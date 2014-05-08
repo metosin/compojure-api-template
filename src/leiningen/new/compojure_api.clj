@@ -11,6 +11,5 @@
               :sanitized (sanitize name)}]
     (->files data
              ["src/{{sanitized}}/handler.clj" (render "handler.clj" data)]
-             ["src/{{sanitized}}/domain.clj" (render "domain.clj" data)]
              ["project.clj" (render "project.clj" data)]
              ["README.md"   (render "README.md" data)])))
