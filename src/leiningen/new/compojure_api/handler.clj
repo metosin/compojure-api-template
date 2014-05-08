@@ -8,12 +8,12 @@
 (defapi app
   (swagger-ui)
   (swagger-docs
-    :title "Sample Api"
-    :description "Sample api it is.")
+    :title "{{name}} Api"
+    :description "{{name}} Api description")
   (swaggered "math"
-    :description "web maths"
-      (GET* "/plus" []
-        :return Result
-        :query-params [x :- Long, y :- Long]
-        :summary "x+y"
-        (ok {:result (+ x y)}))))
+    :description "math with parameters"
+    (GET* "/plus" []
+      :return Result
+      :query-params [x :- Long, y :- Long]
+      :summary "x+y"
+      (ok {:result (+ x y)}))))
