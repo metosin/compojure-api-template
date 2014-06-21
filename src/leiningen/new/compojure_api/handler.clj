@@ -1,19 +1,19 @@
 (ns {{name}}.handler
   (:require [compojure.api.sweet :refer :all]
             [ring.util.http-response :refer :all]
-            [ring.swagger.schema :refer :all]))
+            [schema.core :as s]))
 
-(defmodel Result {:result Long})
+(s/defschema Result {:result Long})
 
 (defapi app
   (swagger-ui)
   (swagger-docs
-    :title "{{name}} Api"
-    :description "{{name}} Api description")
+    :title "{{nameCamel}} Api"
+    :description "this is {{nameCamel}} Api.")
   (swaggered "math"
-    :description "math with parameters"
+    :description "playing with parameters"
     (GET* "/plus" []
       :return Result
-      :query-params [x :- Long, y :- Long]
-      :summary "x+y"
+      :query-params [x :- Long, {y :- Long 1}]
+      :summary "x+y (y default to 1)"
       (ok {:result (+ x y)}))))
