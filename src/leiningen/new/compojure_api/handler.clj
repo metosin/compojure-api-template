@@ -8,11 +8,11 @@
 (defapi app
   (swagger-ui)
   (swagger-docs
-    :title "{{nameCamel}} Api")
-  (swaggered "math"
-    :description "hello api"
+    :title "{{nameCamel}}")
+  (swaggered "api"
+    :description "hello world"
     (GET* "/hello" []
       :return Message
       :query-params [name :- String]
-      :summary "hello world"
+      :summary "say hello"
       (ok {:message (str "Hello, " name)}))))
