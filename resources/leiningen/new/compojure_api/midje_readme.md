@@ -4,9 +4,13 @@ FIXME
 
 ## Usage
 
-### Running
+### Run the application locally
 
 `lein ring server`
+
+### Run the tests
+
+`lein midje`
 
 ### Packaging and running as standalone jar
 
