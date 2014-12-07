@@ -1,7 +1,7 @@
 (ns {{name}}.core-test
   (:require [cheshire.core :as cheshire]
-            [{{name}}.handler :refer :all]
             [midje.sweet :refer :all]
+            [{{name}}.handler :refer :all]
             [ring.mock.request :as mock]))
 
 (defn parse-body [body]
