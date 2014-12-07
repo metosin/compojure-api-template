@@ -4,10 +4,10 @@ FIXME
 
 ## Usage
 
-### Running
+### Run the application locally
 
 `lein ring server`
-
+{{midje-readme}}{{cl-test-readme}}
 ### Packaging and running as standalone jar
 
 ```

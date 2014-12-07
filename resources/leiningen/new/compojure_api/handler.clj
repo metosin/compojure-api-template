@@ -8,7 +8,7 @@
 (defapi app
   (swagger-ui)
   (swagger-docs
-    :title "{{nameCamel}}")
+    :title "{{name-camel}}")
   (swaggered "api"
     :description "hello world"
     (GET* "/hello" []
