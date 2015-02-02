@@ -6,6 +6,5 @@
                  [metosin/ring-swagger-ui "2.0.24"]]
   :ring {:handler {{name}}.handler/app}
   :uberjar-name "server.jar"
-  :profiles {:uberjar {:resource-paths ["swagger-ui"]}
-             :dev {:dependencies [[javax.servlet/servlet-api "2.5"]{{{gen-test-deps}}}{{{midje-deps}}}]
+  :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]{{{gen-test-deps}}}{{{midje-deps}}}]
                    :plugins [[lein-ring "0.9.0"]{{{midje-plugs}}}]}})
