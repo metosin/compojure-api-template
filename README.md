@@ -26,6 +26,6 @@ lein new compojure-api <project-name> +midje
 
 ## License
 
-Copyright © 2014 Metosin Oy
+Copyright © 2014-2015 [Metosin Oy](http://www.metosin.fi)
 
 Distributed under the Eclipse Public License, the same as Clojure
