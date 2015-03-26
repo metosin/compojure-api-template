@@ -3,7 +3,7 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [metosin/compojure-api "0.18.0"]
                  [metosin/ring-http-response "0.6.0"]
-                 [metosin/ring-swagger-ui "2.0.24"]]
+                 [metosin/ring-swagger-ui "2.1.8-M1"]]
   :ring {:handler {{name}}.handler/app}
   :uberjar-name "server.jar"
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]{{{gen-test-deps}}}{{{midje-deps}}}]
