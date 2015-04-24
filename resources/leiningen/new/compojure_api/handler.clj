@@ -8,11 +8,13 @@
 (defapi app
   (swagger-ui)
   (swagger-docs
-    :title "{{name-camel}}")
-  (swaggered "api"
-    :description "hello world"
-    (GET* "/hello" []
+    {:info {:title "{{name-camel}}"
+            :description "Compojure Api example"}
+     :tags [{:name "hello", :description "says hello in Finnish"}]})
+  (context* "/hello" []
+    :tags ["hello"]
+    (GET* "/" []
       :return Message
       :query-params [name :- String]
       :summary "say hello"
-      (ok {:message (str "Hello, " name)}))))
+      (ok {:message (str "Terve, " name)}))))

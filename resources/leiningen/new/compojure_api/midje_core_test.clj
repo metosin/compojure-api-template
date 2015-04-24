@@ -13,4 +13,4 @@
     (let [response (app (-> (mock/request :get  "/hello?name=Stranger")))
           body     (parse-body (:body response))]
       (:status response) => 200
-      (:message body)    => "Hello, Stranger")))
+      (:message body)    => "Terve, Stranger")))
