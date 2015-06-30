@@ -2,8 +2,8 @@
   :description "FIXME: write description"
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [clj-time "0.9.0"] ; required due to bug in lein-ring
-                 [metosin/compojure-api "0.21.0"]]
+                 [metosin/compojure-api "0.22.0"]]
   :ring {:handler {{name}}.handler/app}
   :uberjar-name "server.jar"
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]{{{gen-test-deps}}}{{{midje-deps}}}]
-                   :plugins [[lein-ring "0.9.4"]{{{midje-plugs}}}]}})
+                   :plugins [[lein-ring "0.9.6"]{{{midje-plugs}}}]}})
