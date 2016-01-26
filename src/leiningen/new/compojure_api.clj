@@ -19,13 +19,13 @@
    :name-camel     (str (s/upper-case (subs name 0 1)) (subs name 1))
    :sanitized      (name-to-path name)
    :gen-test-deps  (if (or (midje? opts) (cl-test? opts))
-                     (s/join (concat "\n" (pad 34) "[cheshire \"5.3.1\"]\n"
-                                     (pad 34) "[ring-mock \"0.1.5\"]")))
+                     (s/join (concat "\n" (pad 34) "[cheshire \"5.5.0\"]\n"
+                                     (pad 34) "[ring/ring-mock \"0.3.0\"]")))
    :midje-deps     (if (midje? opts)
-                     (s/join (concat "\n" (pad 34) "[midje \"1.6.3\"]"))
+                     (s/join (concat "\n" (pad 34) "[midje \"1.8.3\"]"))
                      "")
    :midje-plugs    (if (midje? opts)
-                     (s/join (concat "\n" (pad 29) "[lein-midje \"3.1.3\"]"))
+                     (s/join (concat "\n" (pad 29) "[lein-midje \"3.2\"]"))
                      "")
    :midje-readme   (if (midje? opts) "\n### Run the tests\n\n`lein midje`\n" "")
    :cl-test-readme (if (cl-test? opts) "\n### Run the tests\n\n`lein test`\n" "")})
