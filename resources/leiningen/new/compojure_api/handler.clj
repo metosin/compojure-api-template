@@ -5,16 +5,18 @@
 
 (s/defschema Message {:message String})
 
-(defapi app
-  (swagger-ui)
-  (swagger-docs
-    {:info {:title "{{name-camel}}"
-            :description "Compojure Api example"}
-     :tags [{:name "hello", :description "says hello in Finnish"}]})
-  (context* "/hello" []
-    :tags ["hello"]
-    (GET* "/" []
-      :return Message
-      :query-params [name :- String]
-      :summary "say hello"
-      (ok {:message (str "Terve, " name)}))))
+(def app
+  (api
+   {:swagger
+    {:ui "/"
+     :spec "/swagger.json"
+     :data {:info {:title "{{name-camel}}"
+                   :description "Compojure Api example"}
+            :tags [{:name "hello", :description "says hello in Finnish"}]}}}
+   (context "/hello" []
+     :tags ["hello"]
+     (GET "/" []
+       :return Message
+       :query-params [name :- String]
+       :summary "say hello"
+       (ok {:message (str "Terve, " name)})))))
