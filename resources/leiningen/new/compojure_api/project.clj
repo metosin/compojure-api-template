@@ -6,4 +6,4 @@
   :ring {:handler {{name}}.handler/app}
   :uberjar-name "server.jar"
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]{{{gen-test-deps}}}{{{midje-deps}}}]
-                   :plugins [[lein-ring "0.9.6"]{{{midje-plugs}}}]}})
+                   :plugins [[lein-ring "0.9.7"]{{{midje-plugs}}}]}})
