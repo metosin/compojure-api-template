@@ -7,11 +7,12 @@
 
 (def app
   (api
-   (swagger-ui)
-   (swagger-docs
-    {:info {:title "{{name-camel}}"
-            :description "Compojure Api example"}
-     :tags [{:name "hello", :description "says hello in Finnish"}]})
+   {:swagger
+    {:ui "/"
+     :spec "/swagger.json"
+     :data {:info {:title "{{name-camel}}"
+                   :description "Compojure Api example"}
+            :tags [{:name "hello", :description "says hello in Finnish"}]}}}
    (context "/hello" []
      :tags ["hello"]
      (GET "/" []
