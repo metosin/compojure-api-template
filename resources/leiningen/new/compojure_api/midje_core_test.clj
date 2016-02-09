@@ -10,7 +10,7 @@
 (facts "Compojure api tests"
 
   (fact "Test GET request to /hello?name={a-name} returns expected response"
-    (let [response (app (-> (mock/request :get  "/hello?name=Stranger")))
+    (let [response (app (-> (mock/request :get  "/api/plus?x=1&y=2")))
           body     (parse-body (:body response))]
       (:status response) => 200
-      (:message body)    => "Terve, Stranger")))
+      (:result body)    => 3)))
