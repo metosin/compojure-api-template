@@ -1,6 +1,6 @@
 # compojure-api
 
-Compojure Api Template
+Leiningen template for creating apps with [compojure-api](https://github.com/metosin/compojure-api/).
 
 ## Usage
 
@@ -26,6 +26,6 @@ lein new compojure-api <project-name> +midje
 
 ## License
 
-Copyright © 2014-2015 [Metosin Oy](http://www.metosin.fi)
+Copyright © 2014-2017 [Metosin Oy](http://www.metosin.fi)
 
 Distributed under the Eclipse Public License, the same as Clojure
