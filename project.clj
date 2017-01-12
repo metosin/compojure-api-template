@@ -1,4 +1,4 @@
-(defproject compojure-api/lein-template "0.16.7"
+(defproject compojure-api/lein-template "0.16.8-SNAPSHOT"
   :description "Compojure-api template"
   :url "https://github.com/metosin/compojure-api-template"
   :license {:name "Eclipse Public License"
