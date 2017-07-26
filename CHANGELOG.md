@@ -1,3 +1,7 @@
+## 0.16.8 (2017-05-31)
+
+* Update lein-ring dependency to 0.12.0
+
 ## 0.16.7 (2017-01-12)
 
 * Update compojure-api dependency to 1.1.10
