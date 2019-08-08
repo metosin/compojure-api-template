@@ -19,8 +19,7 @@
    :name-camel     (str (s/upper-case (subs name 0 1)) (subs name 1))
    :sanitized      (name-to-path name)
    :gen-test-deps  (if (or (midje? opts) (cl-test? opts))
-                     (s/join (concat "\n" (pad 34) "[cheshire \"5.5.0\"]\n"
-                                     (pad 34) "[ring/ring-mock \"0.3.0\"]")))
+                     (s/join (concat "\n" (pad 34) "[ring/ring-mock \"0.3.2\"]")))
    :midje-deps     (if (midje? opts)
                      (s/join (concat "\n" (pad 34) "[midje \"1.8.3\"]"))
                      "")
